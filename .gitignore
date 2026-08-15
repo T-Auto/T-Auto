@@ -1,0 +1,13 @@
+# 忽略 GitHub Actions 工作流，避免 push 触发消耗额度
+.github/workflows/
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# 临时文件
+*.log
+tmp/
