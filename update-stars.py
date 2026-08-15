@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""更新 README.md 中的星数统计板块。
+"""更新 README.md 中总星数徽章的数字。
 
 用法:
     python update-stars.py
@@ -10,9 +10,10 @@ import json
 import re
 import subprocess
 import sys
+import urllib.parse
 from pathlib import Path
 
-# Windows 控制台可能是 GBK 编码，强制 UTF-8 输出避免打印 ⭐ 时报错
+# Windows 控制台可能是 GBK 编码，强制 UTF-8 输出避免打印报错
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 # 要统计的仓库: (owner/repo, 我的角色)
@@ -27,6 +28,8 @@ README = ROOT / "README.md"
 START = "<!-- STARS:START -->"
 END = "<!-- STARS:END -->"
 
+COLOR = "4b6fff"  # 徽章颜色，和 README 里的保持一致
+
 
 def gh_graphql(query: str) -> dict:
     """通过 gh CLI 调用 GitHub GraphQL API。"""
@@ -37,8 +40,8 @@ def gh_graphql(query: str) -> dict:
     return json.loads(out)
 
 
-def fetch_stars() -> list[int]:
-    """一次 GraphQL 查询拿到所有仓库的星数（顺序与 REPOS 一致）。"""
+def fetch_total() -> int:
+    """一次 GraphQL 查询拿到所有仓库星数之和。"""
     aliases = []
     for i, (full, _) in enumerate(REPOS):
         owner, name = full.split("/")
@@ -48,31 +51,35 @@ def fetch_stars() -> list[int]:
         )
     query = "query { " + " ".join(aliases) + " }"
     data = gh_graphql(query)["data"]
-    return [data[f"r{i}"]["stargazerCount"] for i in range(len(REPOS))]
+    return sum(data[f"r{i}"]["stargazerCount"] for i in range(len(REPOS)))
 
 
-def build_block() -> str:
-    """生成标记块内的表格行。"""
-    stars = fetch_stars()
-    total = sum(stars)
-    rows = []
-    for (full, role), n in zip(REPOS, stars):
-        name = full.split("/")[1]
-        rows.append(f"| [{name}](https://github.com/{full}) | {role} | ⭐ {n:,} |")
-    rows.append(f"| **合计（含我参与的仓库）** | | **⭐ {total:,}** |")
-    return "\n".join(rows)
+def build_block(total: int) -> str:
+    """生成徽章所在的行。"""
+    total_text = f"{total:,}"
+    src = (
+        "https://img.shields.io/badge/"
+        + urllib.parse.quote("总星数")
+        + "-"
+        + urllib.parse.quote(total_text)
+        + f"-{COLOR}?style=flat-square&logo=github&logoColor=white"
+    )
+    return (
+        '<p align="center">\n'
+        f'  <img alt="总星数" src="{src}">\n'
+        "</p>"
+    )
 
 
 def main() -> None:
     content = README.read_text(encoding="utf-8")
-    block = build_block()
+    block = build_block(fetch_total())
     pattern = re.compile(re.escape(START) + r".*?" + re.escape(END), re.S)
     if not pattern.search(content):
         raise SystemExit(f"README.md 中找不到 {START} ... {END} 标记块")
     new_content = pattern.sub(f"{START}\n{block}\n{END}", content)
     README.write_text(new_content, encoding="utf-8")
-    print("已更新 README.md 星数统计:")
-    print(block)
+    print("已更新 README.md 总星数徽章")
 
 
 if __name__ == "__main__":

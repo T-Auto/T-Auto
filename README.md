@@ -15,21 +15,8 @@
   <i>————风雪，以及，猫。</i>
 </div>
 
----
-
-## ✨ 星数统计
-
-<p align="center">
-  <a href="https://github.com/ccch1mneyyy/dsh-TUI"><img alt="dsh-TUI stars" src="https://img.shields.io/github/stars/ccch1mneyyy/dsh-TUI?style=flat-square&label=dsh-TUI&color=4b6fff"></a>
-  <a href="https://github.com/SlimeBoyOwO/LingChat"><img alt="LingChat stars" src="https://img.shields.io/github/stars/SlimeBoyOwO/LingChat?style=flat-square&label=LingChat&color=7da1de"></a>
-</p>
-
-> 总星数由 `update-stars.py` 刷新：`python update-stars.py`（需要 `gh` CLI 登录）
-
-| 项目 | 我的角色 | Stars |
-| :--- | :--- | ---: |
 <!-- STARS:START -->
-| [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | Admin | ⭐ 1,181 |
-| [LingChat](https://github.com/SlimeBoyOwO/LingChat) | 协作 | ⭐ 1,258 |
-| **合计（含我参与的仓库）** | | **⭐ 2,439** |
+<p align="center">
+  <img alt="总星数" src="https://img.shields.io/badge/%E6%80%BB%E6%98%9F%E6%95%B0-2%2C442-4b6fff?style=flat-square&logo=github&logoColor=white">
+</p>
 <!-- STARS:END -->
