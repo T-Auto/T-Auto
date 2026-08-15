@@ -1,5 +1,6 @@
-# 忽略 GitHub Actions 工作流，避免 push 触发消耗额度
-.github/workflows/
+# 默认忽略 GitHub Actions 工作流；白名单只放行定时更新星数的 workflow
+.github/workflows/*
+!.github/workflows/update-stars.yml
 
 # 系统与编辑器
 .DS_Store
