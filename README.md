@@ -19,7 +19,12 @@
 
 ## ✨ 星数统计
 
-> 数字由 `update-stars.py` 刷新：`python update-stars.py`（需要 `gh` CLI 登录）
+<p align="center">
+  <a href="https://github.com/ccch1mneyyy/dsh-TUI"><img alt="dsh-TUI stars" src="https://img.shields.io/github/stars/ccch1mneyyy/dsh-TUI?style=flat-square&label=dsh-TUI&color=4b6fff"></a>
+  <a href="https://github.com/SlimeBoyOwO/LingChat"><img alt="LingChat stars" src="https://img.shields.io/github/stars/SlimeBoyOwO/LingChat?style=flat-square&label=LingChat&color=7da1de"></a>
+</p>
+
+> 总星数由 `update-stars.py` 刷新：`python update-stars.py`（需要 `gh` CLI 登录）
 
 | 项目 | 我的角色 | Stars |
 | :--- | :--- | ---: |
