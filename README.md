@@ -14,3 +14,17 @@
 <div align="right">
   <i>————风雪，以及，猫。</i>
 </div>
+
+---
+
+## ✨ 星数统计
+
+> 数字由 `update-stars.py` 刷新：`python update-stars.py`（需要 `gh` CLI 登录）
+
+| 项目 | 我的角色 | Stars |
+| :--- | :--- | ---: |
+<!-- STARS:START -->
+| [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | Admin | ⭐ 1,181 |
+| [LingChat](https://github.com/SlimeBoyOwO/LingChat) | 协作 | ⭐ 1,258 |
+| **合计（含我参与的仓库）** | | **⭐ 2,439** |
+<!-- STARS:END -->
