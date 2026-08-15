@@ -28,7 +28,9 @@ README = ROOT / "README.md"
 START = "<!-- STARS:START -->"
 END = "<!-- STARS:END -->"
 
-COLOR = "4b6fff"  # 徽章颜色，和 README 里的保持一致
+COLOR = "f59e0b"  # 徽章颜色，和 README 里的保持一致
+
+LABEL = "stars"
 
 
 def gh_graphql(query: str) -> dict:
@@ -59,14 +61,14 @@ def build_block(total: int) -> str:
     total_text = f"{total:,}"
     src = (
         "https://img.shields.io/badge/"
-        + urllib.parse.quote("总星数")
+        + LABEL
         + "-"
         + urllib.parse.quote(total_text)
         + f"-{COLOR}?style=flat-square&logo=github&logoColor=white"
     )
     return (
         '<p align="center">\n'
-        f'  <img alt="总星数" src="{src}">\n'
+        f'  <img alt="{LABEL}" src="{src}">\n'
         "</p>"
     )
 
