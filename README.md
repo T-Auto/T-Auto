@@ -15,8 +15,10 @@
   <i>————风雪，以及，猫。</i>
 </div>
 
-<!-- STARS:START -->
+<!-- STATS:START -->
 <p align="center">
-  <img alt="stars" src="https://img.shields.io/badge/stars-2%2C567-f59e0b?style=flat-square&logo=github&logoColor=white">
+  <img alt="commits" src="https://img.shields.io/badge/commits-2%2C835-f59e0b?style=flat-square&logo=github&logoColor=white">   <img alt="stars" src="https://img.shields.io/badge/stars-2%2C696-f59e0b?style=flat-square&logo=github&logoColor=white">   <img alt="followers" src="https://img.shields.io/badge/followers-21-f59e0b?style=flat-square&logo=github&logoColor=white">   <img alt="repos" src="https://img.shields.io/badge/repos-16-f59e0b?style=flat-square&logo=github&logoColor=white">
+<br>
+  <img alt="commits 2026" src="https://img.shields.io/badge/commits%202026-142-f59e0b?style=flat-square&logo=github&logoColor=white">   <img alt="contributions 2026" src="https://img.shields.io/badge/contributions%202026-165-f59e0b?style=flat-square&logo=github&logoColor=white">   <img alt="prs 2026" src="https://img.shields.io/badge/prs%202026-2-f59e0b?style=flat-square&logo=github&logoColor=white">   <img alt="issues 2026" src="https://img.shields.io/badge/issues%202026-13-f59e0b?style=flat-square&logo=github&logoColor=white">
 </p>
-<!-- STARS:END -->
+<!-- STATS:END -->

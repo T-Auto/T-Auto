@@ -1,6 +1,6 @@
-# 默认忽略 GitHub Actions 工作流；白名单只放行定时更新星数的 workflow
+# 默认忽略 GitHub Actions 工作流；白名单只放行定时更新数据徽章的 workflow
 .github/workflows/*
-!.github/workflows/update-stars.yml
+!.github/workflows/update-stats.yml
 
 # 系统与编辑器
 .DS_Store
