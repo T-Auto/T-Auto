@@ -17,6 +17,6 @@
 
 <!-- STATS:START -->
 <p align="center">
-  <img alt="commits" src="https://img.shields.io/badge/commits-2%2C594-3fb950?style=flat-square">   <img alt="followers" src="https://img.shields.io/badge/followers-21-58a6ff?style=flat-square">   <img alt="stars" src="https://img.shields.io/badge/stars-2%2C700-f59e0b?style=flat-square">
+  <img alt="stars" src="https://img.shields.io/badge/stars-2%2C702-f59e0b?style=flat-square">   <img alt="followers" src="https://img.shields.io/badge/followers-21-58a6ff?style=flat-square">
 </p>
 <!-- STATS:END -->

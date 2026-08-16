@@ -2,16 +2,13 @@
 """更新 README.md 中的 GitHub 数据徽章（每日定时）。
 
 数据来源（GitHub REST API）:
-  - search  : 作者历史总提交数
-  - users   : 粉丝数
-  - repos   : 名下 + 协作仓库总星数
+  - users : 粉丝数
+  - repos : 名下 + 协作仓库总星数
 
 用法:
     python update-stats.py
 
 需要 `gh` CLI 已登录（GitHub API 认证通过 gh 完成）。
-注意：CI 的 GITHUB_TOKEN 只能统计公共仓库提交数（对外口径）；
-本地 PAT 含私有仓库，数字会偏大，以 CI 生成为准。
 """
 import json
 import re
@@ -35,9 +32,8 @@ README = ROOT / "README.md"
 START = "<!-- STATS:START -->"
 END = "<!-- STATS:END -->"
 
-# 每个徽章的颜色：commits 绿 / followers 蓝 / stars 金黄（GitHub 官方色系）
+# 每个徽章的颜色：followers 蓝 / stars 金黄（GitHub 官方色系）
 COLORS = {
-    "commits": "3fb950",
     "followers": "58a6ff",
     "stars": "f59e0b",
 }
@@ -73,14 +69,9 @@ def fetch_stats() -> dict:
         repo = gh_json(f"repos/{owner}/{name}")
         total_stars += repo["stargazers_count"]
 
-    # 3. 该作者的历史总提交数（search API，所有仓库所有年份）
-    search = gh_json("search/commits?q=author:" + USER + "&per_page=1")
-    total_commits = search["total_count"]
-
     return {
         "followers": followers,
         "total_stars": total_stars,
-        "total_commits": total_commits,
     }
 
 
@@ -100,14 +91,13 @@ def badge(label: str, value, color: str, with_logo: bool = True) -> str:
 
 
 def build_block(s: dict) -> str:
-    """一行三枚徽章：commits / followers / stars（纯文字、无 github 标志）。"""
+    """一行两枚徽章：stars / followers（纯文字、无 github 标志）。"""
     return (
         '<p align="center">\n'
         + " ".join(
             [
-                badge("commits", s["total_commits"], COLORS["commits"], with_logo=False),
-                badge("followers", s["followers"], COLORS["followers"], with_logo=False),
                 badge("stars", s["total_stars"], COLORS["stars"], with_logo=False),
+                badge("followers", s["followers"], COLORS["followers"], with_logo=False),
             ]
         )
         + "\n</p>"
