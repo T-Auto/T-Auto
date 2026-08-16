@@ -13,7 +13,7 @@
 >因为猫和风雪已让未来经过昨天
 
 <br>
-<div align="right">
+<div align="center">
   <i>————风雪，以及，猫。</i>
 </div>
 
