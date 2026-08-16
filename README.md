@@ -17,6 +17,6 @@
 
 <!-- STARS:START -->
 <p align="center">
-  <img alt="stars" src="https://img.shields.io/badge/stars-2%2C445-f59e0b?style=flat-square&logo=github&logoColor=white">
+  <img alt="stars" src="https://img.shields.io/badge/stars-2%2C567-f59e0b?style=flat-square&logo=github&logoColor=white">
 </p>
 <!-- STARS:END -->
