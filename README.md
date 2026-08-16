@@ -17,6 +17,6 @@
 
 <!-- STATS:START -->
 <p align="center">
-  <img alt="commits" src="https://img.shields.io/badge/commits-2%2C591-3fb950?style=flat-square&logo=github&logoColor=white">   <img alt="followers" src="https://img.shields.io/badge/followers-21-58a6ff?style=flat-square&logo=github&logoColor=white">   <img alt="⭐ stars" src="https://img.shields.io/badge/%E2%AD%90%20stars-2%2C698-f59e0b?style=flat-square">
+  <img alt="commits" src="https://img.shields.io/badge/commits-2%2C592-3fb950?style=flat-square&logo=github&logoColor=white">   <img alt="followers" src="https://img.shields.io/badge/followers-21-58a6ff?style=flat-square&logo=github&logoColor=white">   <img alt="⭐ stars" src="https://img.shields.io/badge/%E2%AD%90%20stars-2%2C698-f59e0b?style=flat-square">
 </p>
 <!-- STATS:END -->
