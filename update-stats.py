@@ -100,13 +100,13 @@ def badge(label: str, value, color: str, with_logo: bool = True) -> str:
 
 
 def build_block(s: dict) -> str:
-    """一行三枚徽章：commits / followers / ⭐stars。"""
+    """一行三枚徽章：📝commits / 👥followers / ⭐stars（全 emoji、无 github 标志）。"""
     return (
         '<p align="center">\n'
         + " ".join(
             [
-                badge("commits", s["total_commits"], COLORS["commits"]),
-                badge("followers", s["followers"], COLORS["followers"]),
+                badge("📝 commits", s["total_commits"], COLORS["commits"], with_logo=False),
+                badge("👥 followers", s["followers"], COLORS["followers"], with_logo=False),
                 badge("⭐ stars", s["total_stars"], COLORS["stars"], with_logo=False),
             ]
         )
