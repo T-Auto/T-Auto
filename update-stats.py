@@ -44,9 +44,6 @@ COLORS = {
 LOGO = "github"
 
 
-ORDER = ["commits", "followers", "stars"]  # 徽章展示顺序
-
-
 def gh_json(url: str) -> dict:
     """通过 gh CLI 调用 GitHub REST API。"""
     out = subprocess.run(
@@ -87,27 +84,34 @@ def fetch_stats() -> dict:
     }
 
 
-def badge(label: str, value, color: str) -> str:
-    """生成一个 shields.io 徽章（github logo）。"""
+def badge(label: str, value, color: str, with_logo: bool = True) -> str:
+    """生成一个 shields.io 徽章。with_logo=False 时不带 github 标志。"""
+    query = "?style=flat-square"
+    if with_logo:
+        query += f"&logo={LOGO}&logoColor=white"
     src = (
         "https://img.shields.io/badge/"
         + urllib.parse.quote(label, safe="")
         + "-"
         + urllib.parse.quote(f"{value:,}", safe="")
-        + f"-{color}?style=flat-square&logo={LOGO}&logoColor=white"
+        + f"-{color}{query}"
     )
     return f'  <img alt="{label}" src="{src}">'
 
 
 def build_block(s: dict) -> str:
-    """一行三枚徽章：commits / followers / stars。"""
-    values = {
-        "commits": s["total_commits"],
-        "followers": s["followers"],
-        "stars": s["total_stars"],
-    }
-    items = [badge(label, values[label], COLORS[label]) for label in ORDER]
-    return '<p align="center">\n' + " ".join(items) + "\n</p>"
+    """一行三枚徽章：commits / followers / ⭐stars。"""
+    return (
+        '<p align="center">\n'
+        + " ".join(
+            [
+                badge("commits", s["total_commits"], COLORS["commits"]),
+                badge("followers", s["followers"], COLORS["followers"]),
+                badge("⭐ stars", s["total_stars"], COLORS["stars"], with_logo=False),
+            ]
+        )
+        + "\n</p>"
+    )
 
 
 def main() -> None:
