@@ -21,6 +21,6 @@
 
 <!-- STATS:START -->
 <p align="center">
-  <img alt="stars" src="https://img.shields.io/badge/stars-5%2C226-f59e0b?style=flat-square">   <img alt="followers" src="https://img.shields.io/badge/followers-29-58a6ff?style=flat-square">
+  <img alt="stars" src="https://img.shields.io/badge/stars-5%2C226-f59e0b?style=flat-square">   <img alt="followers" src="https://img.shields.io/badge/followers-29-58a6ff?style=flat-square">   <img alt="visitors" src="https://komarev.com/ghpvc/?username=T-Auto&base=500&style=flat-square&label=visitors&color=2ea043">
 </p>
 <!-- STATS:END -->

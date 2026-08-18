@@ -39,6 +39,12 @@ COLORS = {
 }
 LOGO = "github"
 
+# visitors 计数器：ghpvc 动态徽章，base 参数从 500 起跳（真实访问在此之上累加）
+VISITORS_BADGE = (
+    "https://komarev.com/ghpvc/?username=T-Auto"
+    "&base=500&style=flat-square&label=visitors&color=2ea043"
+)
+
 
 def gh_json(url: str) -> dict:
     """通过 gh CLI 调用 GitHub REST API。"""
@@ -91,13 +97,14 @@ def badge(label: str, value, color: str, with_logo: bool = True) -> str:
 
 
 def build_block(s: dict) -> str:
-    """一行两枚徽章：stars / followers（纯文字、无 github 标志）。"""
+    """一行三枚徽章：stars / followers / visitors（纯文字、无 github 标志）。"""
     return (
         '<p align="center">\n'
         + " ".join(
             [
                 badge("stars", s["total_stars"], COLORS["stars"], with_logo=False),
                 badge("followers", s["followers"], COLORS["followers"], with_logo=False),
+                f'  <img alt="visitors" src="{VISITORS_BADGE}">',
             ]
         )
         + "\n</p>"
