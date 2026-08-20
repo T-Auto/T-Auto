@@ -21,6 +21,6 @@
 
 <!-- STATS:START -->
 <p align="center">
-  <img alt="stars" src="https://img.shields.io/badge/stars-3%2C600-f59e0b?style=flat-square">   <img alt="followers" src="https://img.shields.io/badge/followers-24-58a6ff?style=flat-square">
+  <img alt="stars" src="https://img.shields.io/badge/stars-3%2C770-f59e0b?style=flat-square">   <img alt="followers" src="https://img.shields.io/badge/followers-24-58a6ff?style=flat-square">
 </p>
 <!-- STATS:END -->
