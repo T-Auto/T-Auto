@@ -25,6 +25,7 @@ USER = "T-Auto"          # 统计哪个账号
 EXTRA_REPOS = [
     "ccch1mneyyy/dsh-TUI",
     "SlimeBoyOwO/LingChat",
+    "DSH-EAC/DSH-Desktop-EAC",
 ]
 ROOT = Path(__file__).resolve().parent
 README = ROOT / "README.md"
