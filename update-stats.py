@@ -22,10 +22,12 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 USER = "T-Auto"          # 统计哪个账号
 # 协作/参与但不在自己名下的仓库，星数一并计入（与原 stars 徽章口径一致）
+# 注意：自己名下（owner 为 USER）的仓库已由上面的分页遍历统计，切勿再加到这里，否则会双计。
 EXTRA_REPOS = [
     "ccch1mneyyy/dsh-TUI",
     "SlimeBoyOwO/LingChat",
     "DSH-EAC/DSH-Desktop-EAC",
+    "Yan-Zero/dsh-std",
 ]
 ROOT = Path(__file__).resolve().parent
 README = ROOT / "README.md"
