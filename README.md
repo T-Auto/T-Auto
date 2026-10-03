@@ -1,10 +1,5 @@
 # 风雪
 
-- Owner of [dsh-ecosystem-spec](https://github.com/T-Auto/dsh-ecosystem-spec) and [dsh-std](https://github.com/T-Auto/dsh-std) / 项目所有者
-- Governance of [DSH-EAC](https://github.com/DSH-EAC) / 组织治理
-- Admin & Architect of [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) / 架构师 & 团队管理
-- 和猫互为共轭主仆
-
 >世界上有两种代码。一种来自会写代码的人，一种来自趴在键盘上的猫
 >
 >猫喜欢趴在风雪的键盘上，于是提交了 commit，于是审阅了 PR
@@ -16,6 +11,11 @@
 >倘若光阴倒悬，未来折返，请不要担心，请不要忧念
 >
 >因为猫和风雪已让未来经过昨天
+
+- Owner of [dsh-ecosystem-spec](https://github.com/T-Auto/dsh-ecosystem-spec) and [dsh-std](https://github.com/T-Auto/dsh-std) / 项目所有者
+- Governance of [DSH-EAC](https://github.com/DSH-EAC) / 组织治理
+- Admin & Architect of [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) / 架构师 & 团队管理
+- 和猫互为共轭主仆
 
 <br>
 <div align="center">
