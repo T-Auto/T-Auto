@@ -62,11 +62,14 @@ START = "<!-- STATS:START -->"
 END = "<!-- STATS:END -->"
 
 # 每个徽章的颜色：followers 蓝 / star 金黄（GitHub 官方色系）
-# collaborator 用更淡的琥珀色（amber-300），和 owner/admin 的 amber-500 区分开
+# collaborator 用同色相、但饱和度与亮度各降一点的金色（H38 S85 L47）。
+# 注意：shields.io 会按背景亮度自动挑字色，底色一旦偏浅，数字就变成深灰 #333，
+#       而且没有 textColor 之类参数可以强制白字；要保持白字只能选足够深的底色
+#       （实测 H38 色相下亮度上限约 L53，例如 f3ab1b）。
 COLORS = {
     "followers": "58a6ff",
     "owner_admin": "f59e0b",
-    "collaborator": "fcd34d",
+    "collaborator": "de9312",
 }
 LOGO = "github"
 
