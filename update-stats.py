@@ -6,10 +6,13 @@
   - repos : 两个 star 徽章各自名下仓库的星数之和
 
 star 徽章口径（按 T-Auto 在各仓库中的身份分组）:
-  - star(owner/admin)  : 自己拥有 / 担任 owner、admin 的仓库
-                         = tui + eac + spec + std
-  - star(collaborator) : 仅以协作者身份参与的仓库
-                         = lingchat + DeepSeek-Balance-Whale-Widget
+  - star · owner/admin  : 自己拥有 / 担任 owner、admin 的仓库
+                          = tui + eac + spec + std
+  - star · collaborator : 仅以协作者身份参与的仓库
+                          = lingchat + DeepSeek-Balance-Whale-Widget
+
+提示: 徽章上的文字由 shields.io 依据 src 里的 URL 渲染，
+      改 README 里的 alt 属性不会改变显示效果；要改标签请改这里的 STAR_GROUPS。
 
 用法:
     python update-stats.py
@@ -34,7 +37,7 @@ USER = "T-Auto"          # 统计哪个账号
 STAR_GROUPS = [
     (
         "owner_admin",
-        "star(owner/admin)",
+        "star · owner/admin",
         [
             "ccch1mneyyy/dsh-TUI",          # tui
             "DSH-EAC/DSH-Desktop-EAC",      # eac
@@ -44,7 +47,7 @@ STAR_GROUPS = [
     ),
     (
         "collaborator",
-        "star(collaborator)",
+        "star · collaborator",
         [
             "SlimeBoyOwO/LingChat",                       # lingchat
             "MeteorNOX/DeepSeek-Balance-Whale-Widget",    # whale widget
