@@ -12,9 +12,9 @@
 >
 >因为猫和风雪已让未来经过昨天
 
-- Owner of [dsh-ecosystem-spec](https://github.com/T-Auto/dsh-ecosystem-spec) and [dsh-std](https://github.com/T-Auto/dsh-std) / 项目所有者
-- Governance of [DSH-EAC](https://github.com/DSH-EAC) / 组织治理
-- Admin & Architect of [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) / 架构师 & 团队管理
+- Owner of [dsh-ecosystem-spec](https://github.com/T-Auto/dsh-ecosystem-spec) and [dsh-std](https://github.com/T-Auto/dsh-std) ·  ·  ·  ·  ·  · 项目所有者
+- Governance of [DSH-EAC](https://github.com/DSH-EAC) ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·组织治理
+- Admin & Architect of [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  · 团队管理 & 架构师
 - 和猫互为共轭主仆
 
 <br>
