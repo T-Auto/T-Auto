@@ -3,7 +3,13 @@
 
 数据来源（GitHub REST API）:
   - users : 粉丝数
-  - repos : 名下 + 协作仓库总星数
+  - repos : 两个 star 徽章各自名下仓库的星数之和
+
+star 徽章口径（按 T-Auto 在各仓库中的身份分组）:
+  - star(owner/admin)  : 自己拥有 / 担任 owner、admin 的仓库
+                         = tui + eac + spec + std
+  - star(collaborator) : 仅以协作者身份参与的仓库
+                         = lingchat + DeepSeek-Balance-Whale-Widget
 
 用法:
     python update-stats.py
@@ -21,24 +27,42 @@ from pathlib import Path
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 USER = "T-Auto"          # 统计哪个账号
-# 协作/参与但不在自己名下的仓库，星数一并计入（与原 stars 徽章口径一致）
-# 注意：自己名下（owner 为 USER）的仓库已由上面的分页遍历统计，切勿再加到这里，否则会双计。
-EXTRA_REPOS = [
-    "ccch1mneyyy/dsh-TUI",
-    "SlimeBoyOwO/LingChat",
-    "DSH-EAC/DSH-Desktop-EAC",
-    "Yan-Zero/dsh-std",
+
+# 星数分组：每组 = (内部键, 徽章标签, 仓库列表)
+# 注意：同一个仓库只能出现在一组里，否则会重复计数；
+#       GitHub 的仓库改名/转移会自动 302 到新地址，gh api 能正常跟随。
+STAR_GROUPS = [
+    (
+        "owner_admin",
+        "star(owner/admin)",
+        [
+            "ccch1mneyyy/dsh-TUI",          # tui
+            "DSH-EAC/DSH-Desktop-EAC",      # eac
+            "T-Auto/dsh-ecosystem-spec",    # spec
+            "T-Auto/dsh-std",               # std
+        ],
+    ),
+    (
+        "collaborator",
+        "star(collaborator)",
+        [
+            "SlimeBoyOwO/LingChat",                       # lingchat
+            "MeteorNOX/DeepSeek-Balance-Whale-Widget",    # whale widget
+        ],
+    ),
 ]
+
 ROOT = Path(__file__).resolve().parent
 README = ROOT / "README.md"
 
 START = "<!-- STATS:START -->"
 END = "<!-- STATS:END -->"
 
-# 每个徽章的颜色：followers 蓝 / stars 金黄（GitHub 官方色系）
+# 每个徽章的颜色：followers 蓝 / star 金黄（GitHub 官方色系）
 COLORS = {
     "followers": "58a6ff",
-    "stars": "f59e0b",
+    "owner_admin": "f59e0b",
+    "collaborator": "f59e0b",
 }
 LOGO = "github"
 
@@ -64,23 +88,18 @@ def fetch_stats() -> dict:
     user = gh_json("users/" + USER)
     followers = user["followers"]
 
-    # 2. 跨仓库总星数 = 名下公开仓库 + 协作仓库（分页遍历）
-    total_stars = 0
-    page = 1
-    while True:
-        batch = gh_json(f"users/{USER}/repos?per_page=100&page={page}")
-        if not batch:
-            break
-        total_stars += sum(r["stargazers_count"] for r in batch)
-        page += 1
-    for full in EXTRA_REPOS:
-        owner, name = full.split("/")
-        repo = gh_json(f"repos/{owner}/{name}")
-        total_stars += repo["stargazers_count"]
+    # 2. 两个 star 分组：各自仓库列表的星数之和
+    stars = {}
+    for key, _label, repos in STAR_GROUPS:
+        total = 0
+        for full in repos:
+            owner, name = full.split("/")
+            total += gh_json(f"repos/{owner}/{name}")["stargazers_count"]
+        stars[key] = total
 
     return {
         "followers": followers,
-        "total_stars": total_stars,
+        "stars": stars,
     }
 
 
@@ -100,18 +119,15 @@ def badge(label: str, value, color: str, with_logo: bool = True) -> str:
 
 
 def build_block(s: dict) -> str:
-    """一行三枚徽章：stars / followers / visitors（纯文字、无 github 标志）。"""
-    return (
-        '<p align="center">\n'
-        + " ".join(
-            [
-                badge("stars", s["total_stars"], COLORS["stars"], with_logo=False),
-                badge("followers", s["followers"], COLORS["followers"], with_logo=False),
-                f'  <img alt="visitors" src="{VISITORS_BADGE}">',
-            ]
-        )
-        + "\n</p>"
-    )
+    """一行徽章：star(owner/admin) / star(collaborator) / followers / visitors。"""
+    stars = s["stars"]
+    badges = [
+        badge(label, stars[key], COLORS[key], with_logo=False)
+        for key, label, _repos in STAR_GROUPS
+    ]
+    badges.append(badge("followers", s["followers"], COLORS["followers"], with_logo=False))
+    badges.append(f'  <img alt="visitors" src="{VISITORS_BADGE}">')
+    return '<p align="center">\n' + " ".join(badges) + "\n</p>"
 
 
 def main() -> None:
