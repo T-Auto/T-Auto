@@ -62,10 +62,11 @@ START = "<!-- STATS:START -->"
 END = "<!-- STATS:END -->"
 
 # 每个徽章的颜色：followers 蓝 / star 金黄（GitHub 官方色系）
+# collaborator 用更淡的琥珀色（amber-300），和 owner/admin 的 amber-500 区分开
 COLORS = {
     "followers": "58a6ff",
     "owner_admin": "f59e0b",
-    "collaborator": "f59e0b",
+    "collaborator": "fcd34d",
 }
 LOGO = "github"
 
