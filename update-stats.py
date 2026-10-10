@@ -7,7 +7,7 @@
 
 star 徽章口径（按 T-Auto 在各仓库中的身份分组）:
   - star · owner/admin  : 自己拥有 / 担任 owner、admin 的仓库
-                          = tui + eac + spec + std + dsh-ops
+                          = tui + spec + std + dsh-ops
   - star · collaborator : 仅以协作者身份参与的仓库
                           = lingchat + DeepSeek-Balance-Whale-Widget
 
@@ -40,7 +40,6 @@ STAR_GROUPS = [
         "star · owner/admin",
         [
             "ccch1mneyyy/dsh-TUI",          # tui
-            "DSH-EAC/DSH-Desktop-EAC",      # eac
             "T-Auto/dsh-ecosystem-spec",    # spec
             "T-Auto/dsh-std",               # std
             "T-Auto/dsh-ops",               # dsh-ops
