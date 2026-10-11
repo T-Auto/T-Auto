@@ -12,9 +12,9 @@
 >
 >因为猫和风雪已让未来经过昨天
 
-- Owner of [dsh-ecosystem-spec](https://github.com/T-Auto/dsh-ecosystem-spec) and [dsh-std](https://github.com/T-Auto/dsh-std) ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  · 项目发起人
-- Admin & Architect of [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  · 团队管理 & 架构师
-- Collaborator of [LingChat](https://github.com/SlimeBoyOwO/LingChat) and [DeepSeek-Balance-Whale-Widget](https://github.com/MeteorNOX/DeepSeek-Balance-Whale-Widget) ·  ·  ·  · 协作共创
+- Owner of [dsh-ops](https://github.com/T-Auto/dsh-ops), [dsh-ecosystem-spec](https://github.com/T-Auto/dsh-ecosystem-spec) and [dsh-std](https://github.com/T-Auto/dsh-std)
+- Admin & Architect of [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) 
+- Collaborator of [LingChat](https://github.com/SlimeBoyOwO/LingChat) and [DeepSeek-Balance-Whale-Widget](https://github.com/MeteorNOX/DeepSeek-Balance-Whale-Widget)
 - 以上皆和猫为共犯
 
 <br>
