@@ -26,6 +26,6 @@
 
 <!-- STATS:START -->
 <p align="center">
-  <img alt="star · owner/admin" src="https://img.shields.io/badge/star%20%C2%B7%20owner%2Fadmin-8%2C195-f59e0b?style=flat-square">   <img alt="star · collaborator" src="https://img.shields.io/badge/star%20%C2%B7%20collaborator-7%2C680-bf9bf5?style=flat-square">   <img alt="followers" src="https://img.shields.io/badge/followers-80-58a6ff?style=flat-square">   <img alt="visitors" src="https://komarev.com/ghpvc/?username=T-Auto&base=500&style=flat-square&label=visitors&color=2ea043">
+  <img alt="star · owner/admin" src="https://img.shields.io/badge/star%20%C2%B7%20owner%2Fadmin-8%2C547-f59e0b?style=flat-square">   <img alt="star · collaborator" src="https://img.shields.io/badge/star%20%C2%B7%20collaborator-7%2C828-bf9bf5?style=flat-square">   <img alt="followers" src="https://img.shields.io/badge/followers-81-58a6ff?style=flat-square">   <img alt="visitors" src="https://img.shields.io/badge/visitors-1%2C839-2ea043?style=flat-square">
 </p>
 <!-- STATS:END -->
