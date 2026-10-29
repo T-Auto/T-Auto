@@ -26,6 +26,6 @@
 
 <!-- STATS:START -->
 <p align="center">
-  <img alt="star · owner/admin" src="https://img.shields.io/badge/star%20%C2%B7%20owner%2Fadmin-10%2C882-f59e0b?style=flat-square">   <img alt="star · collaborator" src="https://img.shields.io/badge/star%20%C2%B7%20collaborator-8%2C745-bf9bf5?style=flat-square">   <img alt="followers" src="https://img.shields.io/badge/followers-110-58a6ff?style=flat-square">
+  <img alt="star · owner/admin" src="https://img.shields.io/badge/star%20%C2%B7%20owner%2Fadmin-11%2C099-f59e0b?style=flat-square">   <img alt="star · collaborator" src="https://img.shields.io/badge/star%20%C2%B7%20collaborator-8%2C857-bf9bf5?style=flat-square">   <img alt="followers" src="https://img.shields.io/badge/followers-114-58a6ff?style=flat-square">
 </p>
 <!-- STATS:END -->
