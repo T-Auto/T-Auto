@@ -13,6 +13,7 @@
 >因为猫和风雪已让未来经过昨天
 
 - Owner of [dsh-ops](https://github.com/T-Auto/dsh-ops), [dsh-ecosystem-spec](https://github.com/T-Auto/dsh-ecosystem-spec) and [dsh-std](https://github.com/T-Auto/dsh-std)
+- Founder & owner of [Tranquillitatis-Lab](https://github.com/Tranquillitatis-Lab)
 - Admin & Architect of [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) 
 - Collaborator of [LingChat](https://github.com/SlimeBoyOwO/LingChat) and [DeepSeek-Balance-Whale-Widget](https://github.com/MeteorNOX/DeepSeek-Balance-Whale-Widget)
 - 以上皆和猫为共犯
